@@ -41,4 +41,8 @@ describe('Products Page Functionality', () => {
 
     })
 
+    after(()=>{
+      cy.logout()
+    })
+
   })
