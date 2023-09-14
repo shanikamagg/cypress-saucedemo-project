@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-13T18:19:43.579Z",
+    "end": "2023-09-13T18:21:06.639Z",
+    "duration": 83060,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dcd974f4-3f5a-4116-a1c4-2f7441fad5f2",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/TC2.cy.js",
+      "file": "cypress/e2e/tests/TC2.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "be98d684-8947-44e2-bc4e-a436b4791e35",
+          "title": "Products Page Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to the Products Page add the Sauce Labs Bolt T-Shirt to basket",
+              "fullTitle": "Products Page Functionality Navigate to the Products Page add the Sauce Labs Bolt T-Shirt to basket",
+              "timedOut": null,
+              "duration": 81442,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('validLogin');\nLoginPage.clickonLoginbutton();\nLoginPage.pageTittle('Swag Labs');\nProductsPage.getProductName('Sauce Labs Bolt T-Shirt');\nProductsPage.addToCart('#add-to-cart-sauce-labs-bolt-t-shirt');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 80000ms: Expected to find element: `//div[normalize-space()='${productName}']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 80000ms: Expected to find element: `//div[normalize-space()='${productName}']`, but never found it.\n    at get product [as product] (webpack://cypress-saucedemo/./cypress/e2e/pageobjects/ProductsPage.js:3:30)\n    at ProductsPage.getProductName (webpack://cypress-saucedemo/./cypress/e2e/pageobjects/ProductsPage.js:10:13)\n    at Context.eval (webpack://cypress-saucedemo/./cypress/e2e/tests/TC2.cy.js:20:19)",
+                "diff": null
+              },
+              "uuid": "f81d742c-f43b-4ebd-8a1d-e70ae63d3bd4",
+              "parentUUID": "be98d684-8947-44e2-bc4e-a436b4791e35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f81d742c-f43b-4ebd-8a1d-e70ae63d3bd4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 81442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

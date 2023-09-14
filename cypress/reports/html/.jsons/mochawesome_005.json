@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-14T08:39:02.127Z",
+    "end": "2023-09-14T08:39:04.505Z",
+    "duration": 2378,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fd94f623-ec43-4a09-abb6-63a306642622",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/TC1.cy.js",
+      "file": "cypress/e2e/tests/TC1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b1c8749-6310-446b-a623-203da41c1ff0",
+          "title": "Login Page Fuctionality Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the error message",
+              "fullTitle": "Login Page Fuctionality Test Verify the error message",
+              "timedOut": null,
+              "duration": 1212,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('invalidLogin');\nLoginPage.clickonLoginbutton();\nLoginPage.getErrorMessage().contains('Epic sadface: Sorry, this user has been locked out.');",
+              "err": {},
+              "uuid": "e9698a0b-439a-4da0-9c5e-90a307e24c66",
+              "parentUUID": "4b1c8749-6310-446b-a623-203da41c1ff0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e9698a0b-439a-4da0-9c5e-90a307e24c66"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
