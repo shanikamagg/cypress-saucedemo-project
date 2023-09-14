@@ -7,7 +7,7 @@ const LoginPage = require('../pageobjects/LoginPage'),
 describe('Products Page Functionality', () => {
 
    //Open the browser
-    beforeEach(()=>
+    before(()=>
     {
       LoginPage.open()
      
