@@ -7,7 +7,7 @@ const LoginPage = require('../pageobjects/LoginPage'),
 describe('Products Page Functionality', () => {
 
    //Open the browser
-    before(()=>
+    beforeEach(()=>
     {
       LoginPage.open()
      
@@ -41,7 +41,7 @@ describe('Products Page Functionality', () => {
 
     })
 
-    after(()=>{
+    afterEach(()=>{
       cy.logout()
     })
 
