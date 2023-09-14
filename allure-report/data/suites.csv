@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Sep 14 09:39:08 BST 2023","Thu Sep 14 09:39:10 BST 2023","2231","","Products Page Functionality","","","","Navigate to the Products Page add the Sauce Labs Bolt T-Shirt to basket",""
-"passed","Thu Sep 14 09:39:03 BST 2023","Thu Sep 14 09:39:04 BST 2023","1214","","Login Page Fuctionality Test","","","","Verify the error message",""
