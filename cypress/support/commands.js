@@ -1,11 +1,20 @@
 /// <reference types="Cypress" />
 /// <reference types = 'cypress-xpath'/>
 
+
 //Custom commands to enter values
 Cypress.Commands.add('verify',(label)=>{
     cy.contains(label).click();
     
 })
+
+//Custom Command to Logout
+Cypress.Commands.add('logout',()=>{ 
+    cy.get('#react-burger-menu-btn').click();
+    cy.get('#logout_sidebar_link').click();
+    
+})
+
 //Custom Command to Login with username and password
 Cypress.Commands.add('login', (fileName, username = '', password = '') => {
     cy.get('.login_wrapper-inner').first().within((form) => {
