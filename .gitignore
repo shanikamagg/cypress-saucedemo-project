@@ -1,0 +1,17 @@
+# Node artifact files
+node_modules/
+dist/
+
+# Compiled Python bytecode
+*.py[cod]
+
+# Log files
+*.log
+
+# Package files
+*.jar
+
+#Reports
+allure-report/
+Allure-results/
+.DS_Store
