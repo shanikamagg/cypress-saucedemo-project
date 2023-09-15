@@ -4,7 +4,6 @@ class LoginPage
   elemenets ={
     loginbtn : () => cy.get('#login-button'),
     error_message_lockedUser :() => cy.get("h3[data-test='error']"),
-    tittleText :() => cy.get('.app_logo')
   }
 
   //Launch the browser
@@ -14,19 +13,20 @@ class LoginPage
     }
   
   //Method to assert the page tittle
-  pageTittle(pageTittle)
+  pageTittle()
   {
-    return this.elemenets.tittleText(pageTittle);
+    return cy.title();
   }
   
   //Click on login button in the Login page
-    clickonLoginbutton()
-    {
+  clickonLoginbutton()
+  {
        this.elemenets.loginbtn().click();
-    }
+  }
 
   // Method to assert error message
-    getErrorMessage() {
+  getErrorMessage()
+  {
       return this.elemenets.error_message_lockedUser();
   }
 

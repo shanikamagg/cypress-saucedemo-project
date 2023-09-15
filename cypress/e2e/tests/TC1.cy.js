@@ -3,7 +3,7 @@ const LoginPage = require('../pageobjects/LoginPage')
 describe('Login Page Fuctionality Test', () => {
 
    //Open the browser
-    before(()=>
+    beforeEach(()=>
     {
       LoginPage.open()
      

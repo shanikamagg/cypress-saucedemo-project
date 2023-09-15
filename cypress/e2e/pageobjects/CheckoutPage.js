@@ -4,14 +4,15 @@ class Checkoutpage
     //Elements of CheckoutPage
     elements ={
 
-        firstNameField : () => cy.get('#first-name'),
-        lastNameField : () => cy.get('#last-name'),
-        zipCodeField : () => cy.get('#postal-code'),
-        submitButton : () => cy.get('#continue'),
+        firstNameField : () => cy.get('[id="first-name"]'),
+        lastNameField : () => cy.get('[id="last-name"]'),
+        zipCodeField : () => cy.get('[id="postal-code"]'),
+        submitButton : () => cy.get('[id="continue"]'),
         totalPrice : () => cy.xpath('//*[@class="summary_info_label summary_total_label"]'),
-        finishButton : () => cy.get('#finish'),
+        finishButton : () => cy.get('[id="finish"]'),
         successMessage : () => cy.get('#checkout_complete_container > h2'),
-        checoutTitle :() => cy.get('.title')
+        checoutTitle :() => cy.get('[class="title"]'),
+        backHomebtn :() => cy.get('[id="back-to-products"]')
     }
 
     //Method to enter the first name
@@ -58,7 +59,12 @@ class Checkoutpage
 
     //Method to get the checkout tittle
     getCheckoutTitle(){
-        return this.elements.checoutTitle()
+        return this.elements.checoutTitle();
+    }
+
+    //Method to get the Back Home button
+    getBackHomeButton(){
+        return this.elements.backHomebtn();
     }
 }
 

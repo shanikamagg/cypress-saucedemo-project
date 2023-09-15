@@ -5,7 +5,8 @@ class ProductsPage
 
         addtoCartbtn : (productName) => cy.xpath(`//*[contains(text(), '${productName}')]`).parents('div.inventory_item_description').contains('Add to cart'),
         price : (productName) => cy.xpath(`//*[contains(text(), '${productName}')]`).parents('div.inventory_item_description').contains('$'),
-        shoppingCartbtn : () => cy.get('#shopping_cart_container > a') 
+        price : (productName) => cy.xpath(`//*[contains(text(), '${productName}')]`).parents('div.inventory_item_description').contains('$'),
+        shoppingCartbtn : () => cy.get('[class="shopping_cart_link"]') 
     }
 
     //Method to click on Add to Cart button
