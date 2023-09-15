@@ -15,7 +15,7 @@ Cypress.Commands.add('logout',()=>{
     
 })
 
-//Cutom Comand for Logs
+//Custom Command for Logs
 Cypress.Commands.add('logMessage', (message) => {
     cy.log(message);
   });
