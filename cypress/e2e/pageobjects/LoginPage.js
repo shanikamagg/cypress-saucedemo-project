@@ -2,8 +2,8 @@ class LoginPage
 {
   //ELements of Login Page
   elemenets ={
-    loginbtn : () => cy.get('#login-button'),
-    error_message_lockedUser :() => cy.get("h3[data-test='error']"),
+    loginbtn : () => cy.get('[id="login-button"]'),
+    error_message_lockedUser :() => cy.get("[data-test='error']")
   }
 
   //Launch the browser

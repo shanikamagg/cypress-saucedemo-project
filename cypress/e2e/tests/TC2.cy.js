@@ -42,9 +42,9 @@ describe('Products Page Functionality', () => {
       CheckoutPage.clickFinishButton();
       
       //Assertions of Checkout completion page
-      CheckoutPage.getCheckoutTitle().should('have.text','Checkout: Complete!');
-      CheckoutPage.getSuccessMessage().should('have.text','Thank you for your order!');
-      CheckoutPage.getBackHomeButton().should('be.visible');
+      CheckoutPage.getCheckoutTitle().should('be.visible').should('have.text','Checkout: Complete!');
+      CheckoutPage.getSuccessMessage().should('be.visible').should('have.text','Thank you for your order!');
+      CheckoutPage.getBackHomeButton().should('be.visible').should('be.visible');
       cy.logMessage('Successfully Checkout!');
       
 
