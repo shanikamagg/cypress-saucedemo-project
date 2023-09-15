@@ -20,6 +20,7 @@ describe('Products Page Functionality', () => {
 
       LoginPage.clickonLoginbutton();
       LoginPage.pageTittle().should('eq','Swag Labs');
+      cy.logMessage('Successfully Logged!');
 
       //Assert the Sauce Labs Bolt T-Shirt product and the price
       ProductsPage.getPrice('Sauce Labs Bolt T-Shirt').should('be.visible').should('have.text','$15.99');
@@ -44,6 +45,7 @@ describe('Products Page Functionality', () => {
       CheckoutPage.getCheckoutTitle().should('have.text','Checkout: Complete!');
       CheckoutPage.getSuccessMessage().should('have.text','Thank you for your order!');
       CheckoutPage.getBackHomeButton().should('be.visible');
+      cy.logMessage('Successfully Checkout!');
       
 
     })

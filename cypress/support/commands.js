@@ -15,6 +15,11 @@ Cypress.Commands.add('logout',()=>{
     
 })
 
+//Cutom Comand for Logs
+Cypress.Commands.add('logMessage', (message) => {
+    cy.log(message);
+  });
+
 //Custom Command to Login with username and password
 Cypress.Commands.add('login', (fileName, username = '', password = '') => {
     cy.get('.login_wrapper-inner').first().within((form) => {
