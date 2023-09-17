@@ -9,44 +9,52 @@ describe('Products Page Functionality', () => {
    //Open the browser
     beforeEach(()=>
     {
-      LoginPage.open()
-     
-    })
-  
-    //Navigate to the Products Page add the Sauce Labs Bolt T-Shirt to basket 
-    it('Navigate to the Products Page add the Sauce Labs Bolt T-Shirt to basket',() =>
-    {
+      LoginPage.open();
       cy.login('validLogin');
-
       LoginPage.clickonLoginbutton();
       LoginPage.pageTittle().should('eq','Swag Labs');
       cy.logMessage('Successfully Logged!');
-
-      //Assert the Sauce Labs Bolt T-Shirt product and the price
+     
+    })
+  
+    //Product Page Navigation and Assert Items
+    it('Product Page Navigation and Assert Items',() =>
+    {
+      //Navigate to Products page and add Sauce Labs Bolt T-Shirt to basket
+      ProductsPage.addToCart('Sauce Labs Bolt T-Shirt')
+      //Assert that the prices is $15.99
       ProductsPage.getPrice('Sauce Labs Bolt T-Shirt').should('be.visible').should('have.text','$15.99');
-      
-      //Assert the Sauce Labs Backpack product and the price - Checkout the price
+      //Add Sauce Labs Backpack to the basket 
+      ProductsPage.addToCart('Sauce Labs Backpack')
+      //Assert that the prices is $29.99
       ProductsPage.getPrice('Sauce Labs Backpack').should('be.visible').should('have.text','$29.99');
-      ProductsPage.addToCart('Sauce Labs Backpack');
       ProductsPage.clickShoppingCart();
-      CartPage.clickCheckout();
 
+      //Click on Checkout Page
+      CartPage.clickCheckout();
+      
+
+      //Enter Checkout Information
       CheckoutPage.enterFirstName('Shanika');
       CheckoutPage.enterLastName('Maggamage');
       CheckoutPage.enterZipCode(1010);
       CheckoutPage.clickSubmitButton();
-      
-      //Assert the Total price
-      CheckoutPage.getTotalPrice().should('be.visible').should('have.text','Total: $32.39');
+      cy.logMessage('Successfully Proceeded to Checkout!');
 
-      CheckoutPage.clickFinishButton();
+      //Assert the Total price
+      CheckoutPage.getTotalPrice().should('be.visible').should('have.text','Total: $49.66');
       
+      //Click on Finish Button
+      CheckoutPage.clickFinishButton();
+
       //Assertions of Checkout completion page
       CheckoutPage.getCheckoutTitle().should('be.visible').should('have.text','Checkout: Complete!');
       CheckoutPage.getSuccessMessage().should('be.visible').should('have.text','Thank you for your order!');
       CheckoutPage.getBackHomeButton().should('be.visible').should('be.visible');
-      cy.logMessage('Successfully Checkout!');
+      cy.logMessage('Successfully Finished the Checkout!');
       
+
+     
 
     })
 
